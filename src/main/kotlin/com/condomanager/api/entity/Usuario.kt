@@ -14,6 +14,7 @@ data class Usuario(
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long?,
     @Column (unique = true)
+    var nome : String,
     var email: String,
     var senha: String
 )

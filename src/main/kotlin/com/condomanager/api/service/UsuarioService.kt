@@ -32,6 +32,7 @@ class UsuarioService (
         var usuarioExistente = repository.findById(id).orElse(null) ?: return null
         usuarioExistente.email = usuario.email
         usuarioExistente.senha = usuario.senha
+        usuarioExistente.nome = usuario.nome
         return repository.save(usuarioExistente)
     }
 }
